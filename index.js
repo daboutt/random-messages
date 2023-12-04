@@ -2,6 +2,20 @@ const generateRandomNumber = () => {
   return Math.floor(Math.random() * 100);
 };
 
+var limit = 3;
+$.ajax({
+  method: 'GET',
+  url: 'https://api.api-ninjas.com/v1/jokes?limit=' + limit,
+  headers: { 'X-Api-Key': 'YOUR_API_KEY' },
+  contentType: 'application/json',
+  success: function (result) {
+    console.log(result);
+  },
+  error: function ajaxError(jqXHR) {
+    console.error('Error: ', jqXHR.responseText);
+  },
+});
+
 const shouldDoWhat = [
   'clean your room',
   'help your mom',
