@@ -1,19 +1,19 @@
 import axios from 'axios';
 
 const YOUR_API_KEY = '+Byofta/hCgUw69/SLtDhQ==XtpXOVgy8efMvlC4';
+const LIMIT_JOKES = 3;
+let data;
 
 const fetchJokes = async () => {
-  let limit = 3;
   const response = await axios({
     method: 'get',
-    url: `https://api.api-ninjas.com/v1/dadjokes?limit=${limit}`,
+    url: `https://api.api-ninjas.com/v1/dadjokes?limit=${LIMIT_JOKES}`,
     headers: { 'X-Api-Key': YOUR_API_KEY },
     contentType: 'application/json',
   });
   return response;
 };
 
-let data;
 fetchJokes()
   .then((res) => {
     data = res.data;
