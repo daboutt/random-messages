@@ -13,7 +13,7 @@ const fetchJokes = async () => {
   });
   return response;
 };
-
+console.log('CHUC NAM MOI THANH CONG');
 fetchJokes()
   .then((res) => {
     data = res.data;
