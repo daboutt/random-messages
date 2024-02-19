@@ -8,6 +8,7 @@
     "prompt-sync": "^4.2.0"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "mocha"
   }
 }
