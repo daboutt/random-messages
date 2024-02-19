@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-import fetchCocktail from './cocktail.js';
-import fetchJokes from './jokes.js';
+import fetchCocktail from './components/cocktail.js';
+import fetchJokes from './components/jokes.js';
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
 dotenv.config();
