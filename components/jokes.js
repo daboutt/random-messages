@@ -9,15 +9,5 @@ const jokesAPI = async (numOfJokes) => {
   );
   return response;
 };
-const fetchJokes = async (numOfJokes) => {
-  jokesAPI(numOfJokes)
-    .then((res) => {
-      res.data.forEach((joke, index) => {
-        console.log(`${index + 1}. ${joke.joke}`);
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
-export default fetchJokes;
+
+export default jokesAPI;

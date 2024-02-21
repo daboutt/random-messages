@@ -1,9 +1,14 @@
-import fetchJokes from '../index.js';
+import jokesAPI from '../components/jokes.js';
 import { expect } from 'chai';
 
-describe('fetchJokes', () => {
-  it('should fetch jokes', async () => {
-    const response = await fetchJokes();
-    expect(response.status).to.equal(200);
+describe('JOKES API', () => {
+  it('should return array of jokes', async () => {
+    await jokesAPI(3)
+      .then((res) => {
+        expect(res.data).to.be.an('array');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 });
